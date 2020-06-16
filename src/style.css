@@ -1,0 +1,120 @@
+body {
+    min-height: 100vh;
+    background-color: #f8f8ff;
+}
+
+header {
+    text-align: center;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    background-color: #4548b0;
+    padding: 20px;
+}
+
+img {
+    max-height: 100%;
+}
+
+.button-container {
+    position: relative;
+}
+
+button svg {
+    height: 15px;
+    margin: 0 5px;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 4px;
+    padding: 15px 32px;
+    border: none;
+    color: #4548b0;
+    background-color: #FFF;
+    text-align: center;
+}
+
+.button-submenu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    margin-top: 5px;
+    padding: 5px;
+    background-color: #FFF;
+    border-radius: 2px;
+    box-shadow: 0 8px 6px -6px #4548b0;
+}
+
+
+button, .button-submenu a {
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button-submenu a {
+    display: flex;
+    padding: 5px;
+    line-height: 20px;
+    align-items: center;
+    color: #4548b0;
+}
+
+.button-submenu a:hover {
+    background-color: #ededff;
+}
+
+.button-submenu a svg {
+    display: flex;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+.button-submenu.hidemenu{
+    display: none;
+}
+
+.button-submenu.showmenu {
+    display: flex;
+    animation: fade-in 1s;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 780px) {
+    section {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    button {
+        flex-basis: 100%;
+    }
+
+    .button-submenu {
+        position: unset;
+    }
+}
